@@ -5,34 +5,25 @@ public class Bai10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nhập số nguyên lớn thứ nhất: ");
-        String str1 = scanner.nextLine();
-        System.out.print("Nhập số nguyên lớn thứ hai: ");
-        String str2 = scanner.nextLine();
+        System.out.print("a = ");
+        BigInteger a = new BigInteger(scanner.nextLine());
 
-        BigInteger num1 = new BigInteger(str1);
-        BigInteger num2 = new BigInteger(str2);
+        System.out.print("b = ");
+        BigInteger b = new BigInteger(scanner.nextLine());
 
-        BigInteger sum = num1.add(num2);
-        System.out.println("\nTổng: " + sum.toString());
+        BigInteger sum = a.add(b);
+        BigInteger difference = a.subtract(b);
+        BigInteger product = a.multiply(b);
+        BigInteger quotient = a.divide(b);
+        BigInteger remainder = a.mod(b);
+        BigInteger power = a.pow(10);
 
-        BigInteger difference = num1.subtract(num2);
-        System.out.println("Hiệu: " + difference.toString());
-
-        BigInteger product = num1.multiply(num2);
-        System.out.println("Tích: " + product.toString());
-
-        BigInteger quotient = (num2.equals(BigInteger.ZERO)) ? BigInteger.ZERO : num1.divide(num2);
-        System.out.println("Thương: " + quotient.toString());
-
-        System.out.print("\nNhập số mũ nguyên lớn: ");
-        String exponentStr = scanner.nextLine();
-        BigInteger exponent = new BigInteger(exponentStr);
-        BigInteger power = num1.pow(exponent.intValue());
-        System.out.println("Lũy thừa: " + power.toString());
-
-        BigInteger modulo = (num2.equals(BigInteger.ZERO)) ? BigInteger.ZERO : num1.mod(num2);
-        System.out.println("Số dư: " + modulo.toString());
+        System.out.println("a + b = " + sum);
+        System.out.println("a - b = " + difference);
+        System.out.println("a * b = " + product);
+        System.out.println("a / b = " + quotient);
+        System.out.println("a % b = " + remainder);
+        System.out.println("a^10 = " + power);
 
         scanner.close();
     }
